@@ -1,0 +1,38 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-output/glance.lpk
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: glance
+
+build:
+  run_buildscript: false
+
+images:
+  - id: glance
+    target: service
+    service: glance
+    source: glanceapp/glance
+    channel: stable
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: mirror
+      image_template: docker.1ms.run/glanceapp/glance:{tag}
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Glance
+    summary: 将所有信息源集中在一处的自托管仪表板
+

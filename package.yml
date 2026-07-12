@@ -1,0 +1,19 @@
+package: community.lazycat.app.glance
+version: 0.8.4
+name: Glance
+description: "一个将所有您的信息源集中在一个地方的本地托管仪表板"
+min_os_version: 1.5.0
+homepage: https://github.com/glanceapp/glance
+author: glanceapp
+
+locales:
+  zh:
+    name: "Glance"
+    description: "一个将所有您的信息源集中在一个地方的本地托管仪表板"
+  zh_CN:
+    name: "Glance"
+    description: "一个将所有您的信息源集中在一个地方的本地托管仪表板"
+  en:
+    name: "Glance"
+    description: "A self-hosted dashboard that puts all your feeds in one place"
+
