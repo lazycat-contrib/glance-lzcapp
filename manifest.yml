@@ -8,8 +8,8 @@ application:
       backend: http://glance:8080/
 services:
   glance:
-    # upstream: glanceapp/glance:v0.8.6
-    image: docker.1ms.run/glanceapp/glance:v0.8.6
+    # upstream: glanceapp/glance:v0.8.7
+    image: docker.1ms.run/glanceapp/glance:v0.8.7
     binds:
       - /lzcapp/var/data:/app/config
     setup_script: |
